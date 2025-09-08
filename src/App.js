@@ -1,23 +1,7 @@
-import './App.css';
-import { createContext, useState } from 'react';
-import Quiz from './components/quiz';
-import Menu from './components/menu';
-import Score from './components/score';
-export const DataContext = createContext()
+import Router2 from "./router2"
 function App() {
-
-  const [appState, setAppState] = useState("menu");
-  const [score, setScore] = useState(0);
   return (
-
-    <DataContext.Provider value={{ appState, setAppState, score, setScore }}>
-      <div className="App">
-        <h1>Wev Development Quiz</h1>
-        {appState === "menu" && <Menu />}
-        {appState === "quiz" && <Quiz />}
-        {appState === "score" && <Score />}
-      </div>
-    </DataContext.Provider>
+    <Router2 />
   );
 }
 
